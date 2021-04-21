@@ -11,7 +11,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
             string ConnString = "server=127.0.0.1,3306;user id=root;database=nmn";
             SqlConnection connect = new SqlConnection(ConnString);
-            connect.Open();
+            SqlCommand command = new SqlCommand("SELECT name FROM test", connect);
         }
     }
 }
